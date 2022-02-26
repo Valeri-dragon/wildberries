@@ -33,7 +33,7 @@ export const getGoods = () => {
   };
 
   const getData = (value, category) => {
-    fetch("/db/db.json")
+    fetch("/wildberries/db/db.json")
       .then((response) => {
         return response.json();
       })
