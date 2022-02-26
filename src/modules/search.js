@@ -43,8 +43,8 @@ export const search = () => {
         );
         localStorage.setItem("goods", JSON.stringify(array));
         // const goods = JSON.parse(localStorage.getItem("goods"));
-        if (window.location.pathname !== "/goods.html") {
-          window.location.href = "/goods.html";
+        if (window.location.pathname !== "/wildberries/goods.html") {
+          window.location.href = "/wildberries/goods.html";
         } else {
           renderGoods(array);
         }
@@ -68,4 +68,3 @@ export const search = () => {
     console.error(e.message);
   }
 };
-

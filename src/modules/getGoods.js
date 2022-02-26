@@ -8,14 +8,7 @@ export const getGoods = () => {
     goods.forEach((good) => {
       //получаем список полученных товаров и создаем элемент
 
-      const {
-        description,
-        id,
-        img,
-        label,
-        name,
-        price,
-      } = good;
+      const { description, id, img, label, name, price } = good;
       const goodBlock = document.createElement("div");
       goodBlock.classList.add("col-lg-3");
       goodBlock.classList.add("col-sm-6");
@@ -50,8 +43,8 @@ export const getGoods = () => {
           : data;
         localStorage.setItem("goods", JSON.stringify(array));
         // const goods = JSON.parse(localStorage.getItem("goods"));
-        if (window.location.pathname !== "/goods.html") {
-          window.location.href = "/goods.html";
+        if (window.location.pathname !== "/wildberries/goods.html") {
+          window.location.href = "/wildberries/goods.html";
         } else {
           renderGoods(array);
         }
@@ -70,7 +63,7 @@ export const getGoods = () => {
 
   if (
     localStorage.getItem("goods") &&
-    window.location.pathname === "/goods.html"
+    window.location.pathname === "/wildberries/goods.html"
   ) {
     renderGoods(JSON.parse(localStorage.getItem("goods")));
   }
@@ -83,4 +76,3 @@ export const getGoods = () => {
     });
   }
 };
-
